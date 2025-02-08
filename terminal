@@ -1,0 +1,26 @@
+# Remove existing setup
+rm -rf aiml-portfolio
+
+# Create new React app
+npx create-react-app aiml-portfolio
+
+# Move into project directory
+cd aiml-portfolio
+
+# Install dependencies
+npm install @mui/material @emotion/react @emotion/styled @mui/icons-material framer-motion react-router-dom styled-components particles-bg @babel/plugin-proposal-private-property-in-object @mui/lab
+
+# Remove existing node_modules and package-lock.json
+rm -rf node_modules package-lock.json
+
+# Clean npm cache
+npm cache clean --force
+
+# Install dependencies again
+npm install
+
+# Create directories and touch files
+mkdir -p src/pages src/components
+touch src/pages/Experience.jsx src/pages/Home.jsx src/pages/Projects.jsx src/pages/Publications.jsx src/pages/Skills.jsx src/pages/Education.jsx
+
+npm start
